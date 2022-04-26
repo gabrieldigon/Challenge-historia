@@ -6,14 +6,17 @@
 	<array>
 		<dict>
 			<key>ModifiedContent</key>
-			<string>//cena capa
+			<string>Quadra.create()
+//cena capa
+//ver labelnode
 </string>
 			<key>ModifiedRange</key>
-			<string>{102, 12}</string>
+			<string>{101, 44}</string>
 			<key>OriginalContent</key>
-			<string></string>
+			<string>
+</string>
 			<key>OriginalRange</key>
-			<string>{102, 0}</string>
+			<string>{101, 1}</string>
 		</dict>
 	</array>
 	<key>FormatVersion</key>

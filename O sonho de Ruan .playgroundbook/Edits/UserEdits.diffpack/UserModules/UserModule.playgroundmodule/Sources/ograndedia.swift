@@ -21,7 +21,8 @@ public class Grandedia: SKScene {
     
     public override func sceneDidLoad() {
         self.anchorPoint = .init(x: 0.5, y: 0.5)
-        self.scaleMode = .aspectFit
+        self.scaleMode = .resizeFill
+            //.resizeFill?
     }
     public override func didMove(to view: SKView) {
         let eleuterio = SKSpriteNode(imageNamed: "perna direita background")
