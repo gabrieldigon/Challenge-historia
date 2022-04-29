@@ -25,13 +25,13 @@ struct cena2: View {
                 }
                 .position(x: 400, y: 950)
                 .buttonStyle(botaoverde())
-                .fullScreenCover(isPresented: $irTelacheia, content: cena1.init)
+                .fullScreenCover(isPresented: $irTelacheia, content: Aquadra.init)
                 
             }
             
             SpriteView(scene: self.scene,options: [.allowsTransparency])
                 .frame(width: 400, height: 400)
-                .position(x: 380, y: 650)
+                .position(x: 380, y: 670)
             
         }
         

@@ -6,23 +6,20 @@ struct cena1: View {
     
     var scene: SKScene {
         let scene = ruanCorrendosemback()
-        scene.size = CGSize(width: 300,height: 300)
+        scene.size = CGSize(width: 400,height: 400)
         return scene
     }
     
     var body: some View {
-        ZStack{
-            
-            
-            
-            Spacer()
-            
-            SpriteView(scene: self.scene)
-                .frame(width: 300, height: 300)
-            
-            Spacer()
+        
+        SpriteView(scene: self.scene)
+        .frame(width: 800, height: 650)
+        Spacer()
+        VStack{
+            ScrollView{
+                Text("ola tufo bem")
+            }
             
         }
-        
     }
 }
