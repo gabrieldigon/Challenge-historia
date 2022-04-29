@@ -11,14 +11,17 @@ class ruanCorrendosemback: SKScene {
     }
     
     public override func didMove(to view: SKView) {
-        let eleuterio = SKSpriteNode(imageNamed: "pernadireitasemback")
-        eleuterio.run(.repeatForever(.animate(with: [
-            SKTexture(imageNamed: "outroframefix2"),
-            SKTexture(imageNamed: "pernaesquerdasembackground"),
-            SKTexture(imageNamed: "pernadireitasembackfix3")
-        ], timePerFrame: 0.4)))
-        addChild(eleuterio)
         
+            
+            let eleuterio = SKSpriteNode(imageNamed: "pernadireitasemback")
+            eleuterio.run(.repeatForever(.animate(with: [
+                SKTexture(imageNamed: "outroframefix2"),
+                SKTexture(imageNamed: "pernaesquerdasembackground"),
+                SKTexture(imageNamed: "pernadireitasembackfix3")
+            ], timePerFrame: 0.4)))
+            addChild(eleuterio)
+            
+        }
     }
-}
+    
 

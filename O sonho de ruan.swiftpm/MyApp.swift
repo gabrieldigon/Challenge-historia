@@ -6,5 +6,8 @@ struct MyApp: App {
         WindowGroup {
             comeco()
         }
+       
     }
+   
+
 }
