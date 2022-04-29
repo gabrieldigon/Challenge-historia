@@ -2,7 +2,7 @@ import SwiftUI
 import SpriteKit
 
 
-struct AQuadra: View {
+struct OSonho: View {
     @State private var irTelacheia = false
 
     var scene: SKScene {
@@ -14,16 +14,16 @@ struct AQuadra: View {
     var body: some View {
         
         ZStack{
-            Color("CorQuadra")
+            Color("verdearena")
                 .ignoresSafeArea()
             HStack{
-            Image("AQUADRA")
+            Image("campoarena")
             .resizable()
             .aspectRatio(contentMode: .fit)
             
             
             }
-            .position(x: 400, y: 360)
+            .position(x: 400, y: 300)
             
             VStack{
                 SpriteView(scene: self.scene,options: [.allowsTransparency])
@@ -31,19 +31,20 @@ struct AQuadra: View {
                     .position(x: 400, y: 550)
                 
                 ScrollView{
-                    Text("Desde criança nosso amigo Ruan tem uma paixão pelo esporte mais famoso do mundo: O FUTEBOL⚽️ ,aos dez anos seu irmão o apresentou a esse mundo e desde la ele tem jogado (quase) todos os dias com seu amigos em uma quadra na rua onde mora.")
+                    Text("O Ruan pequeno virou grande e entrou na faculdade e foi justo em uma semana de prova que surgiu UMA LIGAÇÃO de um amigo o chamando pra jogar na Arena da Amazonia,o jogo era no outro dia, Ruan teve que superar seus limites e estudar todo o conteúdo de sua prova antes do jogo, chegando la não foi apenas recompensado pelo belo campo da arena mas conseguiu deixar sua marca em um lindo gol de fora da área ⚽️  ")
                         .multilineTextAlignment(.center)
-                        .position(x: 400, y: 270)
+                        .position(x: 400, y: 260)
                         .foregroundColor(.white)
-                        .font(.system(size: 30))
-                    Button("Construção"){
+                        .font(.system(size: 28))
+                    Button("Fim"){
                         self.irTelacheia.toggle()
                     }
-                    .position(x: 400, y: 230)
+                    .position(x: 400, y: 210)
                     .buttonStyle(botaoverde())
-                    .foregroundColor(Color("CorQuadra"))
-                    .fullScreenCover(isPresented: $irTelacheia, content: aConstrucao.init)
+                    .foregroundColor(Color("verdearena"))
+                    .fullScreenCover(isPresented: $irTelacheia, content: comeco.init)
                 }
+                
                
                 
             }
@@ -52,3 +53,4 @@ struct AQuadra: View {
         }
     }
 }
+

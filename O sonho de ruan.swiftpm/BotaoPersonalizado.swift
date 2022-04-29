@@ -6,7 +6,6 @@ public struct botaoverde: ButtonStyle {
             .font(.system(size: 40))
             .padding()
             .background(.white)
-            .foregroundColor(Color("verdecampo"))
             .clipShape(Capsule())
             .scaleEffect(configuration.isPressed ? 1.2 : 1.0)
     }

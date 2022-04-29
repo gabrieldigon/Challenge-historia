@@ -1,12 +1,12 @@
 import SwiftUI
 import SpriteKit
-struct cena2: View {
+struct comeco: View {
     
     @State private var irTelacheia = false
     
     var scene: SKScene {
         let scene = ruanCorrendosemback()
-        scene.size = CGSize(width: 100,height: 100)
+        scene.size = CGSize(width: 400,height: 400)
         return scene
     }
     
@@ -25,12 +25,13 @@ struct cena2: View {
                 }
                 .position(x: 400, y: 950)
                 .buttonStyle(botaoverde())
-                .fullScreenCover(isPresented: $irTelacheia, content: Aquadra.init)
+                .foregroundColor(Color("verdecampo"))
+                .fullScreenCover(isPresented: $irTelacheia, content: AQuadra.init)
                 
             }
             
             SpriteView(scene: self.scene,options: [.allowsTransparency])
-                .frame(width: 400, height: 400)
+                .frame(width: 550, height: 550)
                 .position(x: 380, y: 670)
             
         }
