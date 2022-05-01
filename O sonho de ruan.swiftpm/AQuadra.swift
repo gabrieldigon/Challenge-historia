@@ -4,7 +4,8 @@ import SpriteKit
 
 struct AQuadra: View {
     @State private var irTelacheia = false
-
+    @State private var isAnimation = false
+    
     var scene: SKScene {
         let scene = ruanCorrendosemback()
         scene.size = CGSize(width: 400,height: 400)
@@ -28,7 +29,7 @@ struct AQuadra: View {
             VStack{
                 SpriteView(scene: self.scene,options: [.allowsTransparency])
                     .frame(width: 650, height: 650)
-                    .position(x: 400, y: 550)
+                    .position(x: isAnimation ? -300 : 1100 , y: 610)
                 
                 ScrollView{
                     Text("Desde criança nosso amigo Ruan tem uma paixão pelo esporte mais famoso do mundo: O FUTEBOL⚽️ ,aos dez anos seu irmão o apresentou a esse mundo e desde la ele tem jogado (quase) todos os dias com seu amigos em uma quadra na rua onde mora.")
@@ -46,6 +47,13 @@ struct AQuadra: View {
                 }
                
                 
+            }
+            .onAppear {
+                DispatchQueue.main.asyncAfter(deadline: .now()+0.2){
+                    withAnimation(.default.speed(0.02)){
+                        isAnimation.toggle()
+                    }
+                }
             }
             
             

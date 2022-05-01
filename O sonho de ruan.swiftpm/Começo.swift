@@ -22,6 +22,8 @@ struct comeco: View {
     
     
     @State private var irTelacheia = false
+    @State private var isAnimation = false
+
     
     var scene: SKScene {
         let scene = ruanCorrendosemback()
@@ -51,9 +53,14 @@ struct comeco: View {
             
             SpriteView(scene: self.scene,options: [.allowsTransparency])
                 .frame(width: 550, height: 550)
-                .position(x: 380, y: 670)
+                .position(x: isAnimation ? -300 : 1100 , y: 670)
             
         }  .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now()+0.2){
+                withAnimation(.default.speed(0.02)){
+                    isAnimation.toggle()
+                }
+            }
             let sound = Bundle.main.path(forResource: "MUSIQUINHA", ofType: "mp3")
             self.PlayAudio = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
         }
